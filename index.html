@@ -15,6 +15,94 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#000">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #374047;
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+    .header {
+      border-bottom: 1px solid #7f8b93;
+      padding: 2rem;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
+      grid-template-rows: repeat(6, 10rem);
+      grid-gap: 1rem;
+      grid-auto-flow: dense;    
+      padding: 2rem;
+    }
+
+    /* .container > .product:nth-child(4n) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .container > .product > li:nth-child(8n) {
+      grid-column: span 3;
+      grid-row: span 3;
+    } */
+
+    .product {
+      background-color: #fff;
+      border-radius: 4px;
+    }
+    .product--link {
+      color: #374047;
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      transition: ease all .3s;
+    }
+    .product--link:hover {
+      background-color: #eceeef;
+      box-shadow: 0 8px 32px rgba(0,0,0,.32);
+    }
+    .product--link:hover .product--image {
+      background-size: 110%;
+    }
+    .product--category {
+      background-color: #eceeef;
+      border-radius: .5rem;
+      display: inline-block;
+      font-size: .75rem;
+      margin: .5rem 0;
+      padding: .25rem;
+      text-transform: uppercase;
+    }
+    .product--image {
+      background-color: #fff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border-radius: .5rem 0 0 .5rem;
+      border-right: 1px solid #dee1e3;
+      flex-basis: 30%;
+      height: 10rem;
+      transition: ease all .3s;
+      width: 10rem;
+    }    
+    .product--meta {
+      padding: 1rem;
+      flex-basis: 70%;
+    }
+    .product--name {
+      margin-bottom: .5rem;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -23,7 +111,123 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <header class="header">
+    <h1>Shop Indie</h1>
+    <p>A place to support smaller brands.</p>
+  </header>
+
+  <section class="container">
+    <article class="product">
+      <a href="https://www.vinpok.com/products/vinpok-taptek-thinnest-wireless-mac-mechanical-keyboard" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2005/4429/products/vinpok-taptek-thinnest-wireless-mac-mechanical-keyboard-11976900280364_600x600.jpg?v=1574654357);"></div>
+        <div class="product--meta">
+          <span class="product--category">Keyboards</span>
+          <h3 class="product--name">Vinpok Taptek Thinnest Wireless Mac Mechanical Keyboard</h3>
+          <p class="product--price">$199</p>
+        </div>
+      </a>
+    </article>
+
+    <article class="product">
+      <a href="https://advencher.co/collections/advencher-gear/products/advencher-log" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1847/6575/products/log-1_1024x1024@2x.jpg?v=1550682407);"></div>
+        <div class="product--meta">
+          <span class="product--category">Notebooks</span>
+          <h3 class="product--name">Advencher Log (2-Pack)</h3>
+          <p class="product--price">$12</p>        
+        </div>
+      </a>
+    </article>
+
+    <article class="product">
+      <a href="https://migoals.com/products/2020-goal-digger-planner-bold" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0659/7323/products/GD_2020_BOLD_COR_Cover_6597f20b-f84e-4f76-b4c7-418cb4a0f8ae_800x.png?v=1568960112);"></div>
+        <div class="product--meta">
+          <span class="product--category">Notebooks</span>
+          <h3 class="product--name">2020 Goal Digger Planner Bold</h3>
+          <p class="product--price">£23.40</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://trianglenotebook.com/products/triangle-notebook-red-dot-grid" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2521/7878/products/36_1296x.jpg?v=1574633940);"></div>
+        <div class="product--meta">
+          <span class="product--category">Notebooks</span>
+          <h3 class="product--name">Triangle Notebook - Red - DOT GRID</h3>
+          <p class="product--price">$33</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.studioneat.com/products/totebook" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0057/8492/products/Totebook_Open_EndSheet_1024x1024.jpg?v=1558986890);"></div>
+        <div class="product--meta">
+          <span class="product--category">Notebooks</span>
+          <h3 class="product--name">Totebook (2 pack)</h3>
+          <p class="product--price">$20</p>        
+        </div>
+      </a>
+    </article>   
+    
+    <article class="product">
+      <a href="https://advencher.co/collections/advencher-gear/products/advencher-cap" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1847/6575/products/camp-hat-1_1024x1024@2x.jpg?v=1534882616);"></div>
+        <div class="product--meta">
+          <span class="product--category">Headwear</span>
+          <h3 class="product--name">Wool camp cap</h3>
+          <p class="product--price">$32</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="hhttps://shop.meetsomnox.com/product/somnox-sleep-robot/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://shop.meetsomnox.com/wp-content/uploads/sites/2/2019/05/The-Somnox-Sleep-Robot_badge-1.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Sleep</span>
+          <h3 class="product--name">The Somnox Sleep Robot</h3>
+          <p class="product--price">£549</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://www.zeez.org.uk/shop2/zeez-sleep-pebble" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://static1.squarespace.com/static/5bbb2d5e8dfc8c9f41e3ab33/5bbba281e2c4833a57b7eaaf/5bc008bda4222f9cef1b653b/1568918844012/3.jpg?format=500w);"></div>
+        <div class="product--meta">
+          <span class="product--category">Sleep</span>
+          <h3 class="product--name">Zeez Sleep Pebble</h3>
+          <p class="product--price">£300</p>        
+        </div>
+      </a>
+    </article>   
+    
+    <article class="product">
+      <a href="https://uk.kokoon.io/products/kokoon-headphones" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0246/2760/9705/files/2019-FEBRUARY-KOKOON-PRODUCT-SHOOT-LOWRES-23__1_1440x1482_crop_center.jpg?v=1572011620);"></div>
+        <div class="product--meta">
+          <span class="product--category">Sleep</span>
+          <h3 class="product--name">Kokoon Sleep Headphones</h3>
+          <p class="product--price">£315</p>        
+        </div>
+      </a>
+    </article>     
+    
+    <article class="product">
+      <a href="https://ouraring.com/products/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://d1a0efioav7lro.cloudfront.net/wp-content/uploads/2018/11/23132747/327px_Silver.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Sleep</span>
+          <h3 class="product--name">Oura Smart Ring</h3>
+          <p class="product--price">314€</p>        
+        </div>
+      </a>
+    </article>         
+
+  </section>  
  
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
