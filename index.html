@@ -22,27 +22,62 @@
       margin: 0;
       padding: 0;
     }
+
+      /* Define the "system" font family */
+      @font-face {
+        font-family: system;
+        font-style: normal;
+        font-weight: 300;
+        src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+      }
+
     body {
-      background-color: #374047;
-      font-family: sans-serif;
+      background-color: #fef8fb;
+      font-family: "system";
       font-size: 18px;
     }
     .header {
-      border-bottom: 1px solid #7f8b93;
-      color: #fff;
+      align-items: center;
+      border-bottom: 1px solid #7f004a;
+      color: #7f004a;
+      display: flex;
+      justify-content: space-between;
       padding: 2rem;
-      text-align: center;
     }
     .header h1 {
       font-size: 1.5rem;
       line-height: 1;
     }
+    .header a, .footer a {
+      border-bottom: 2px solid #7f004a;
+      color: #7f004a;
+      text-decoration: none;
+      transition: ease all .3s;
+    }
+    .header a:hover, .footer a:hover {
+      border-color: transparent;
+    }
+    .footer {
+      padding: 4rem;
+      text-align: center;
+    }
+    h2 {
+      color: #7f004a;
+      font-size: 1rem;
+      letter-spacing: 8px;
+      margin: 4rem 1rem 0 4rem;
+      text-transform: uppercase;
+    }
     .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));
-      grid-template-rows: repeat(6, 10rem);
+      /* display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
       grid-gap: 1rem;
-      grid-auto-flow: dense;    
+      grid-auto-flow: dense;     */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* max-width: 1160px; */
+      margin: 0 auto;
       padding: 2rem;
     }
 
@@ -58,19 +93,28 @@
 
     .product {
       background-color: #fff;
+      border: 1px solid #7f004a;
       border-radius: 4px;
+      margin: 2rem .5rem;
+      min-width: 320px;
+      max-width: 400px;
+      padding: 1rem;
+      width: 100%;
     }
+
+    .product:hover {
+      border-color: #cf0d7e;
+    }
+
     .product--link {
-      color: #374047;
-      display: flex;
-      justify-content: space-between;
+      /* align-items: center; */
+      color: #7f004a;
+      /* display: flex; */
+      /* justify-content: space-between; */
       text-decoration: none;
       transition: ease all .3s;
     }
-    .product--link:hover {
-      background-color: #eceeef;
-      box-shadow: 0 8px 32px rgba(0,0,0,.32);
-    }
+
     .product--link:hover .product--image {
       background-size: 110%;
     }
@@ -87,13 +131,13 @@
       background-color: #fff;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 100%;
-      border-radius: .5rem 0 0 .5rem;
-      border-right: 1px solid #dee1e3;
-      flex-basis: 30%;
-      height: 10rem;
+      background-size: cover;
+      border-radius: .5rem;
+      /* border-right: 1px solid #dee1e3; */
+      /* flex-basis: 30%; */
+      min-height: 15rem;
       transition: ease all .3s;
-      width: 10rem;
+      /* width: 10rem; */
     }    
     .product--meta {
       padding: 1rem;
@@ -113,11 +157,117 @@
 
   <!-- Add your site or application content here -->
   <header class="header">
-    <h1>Shop Indie</h1>
-    <p>A place to support smaller brands.</p>
+    <div>
+      <h1>Shop Indie</h1>
+      <p>A place to support smaller brands.</p>
+    </div>
+    <div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR3P4mzMXHdiaKy3ZL3A-Ouo3ej8MST_A23UcOzNqYx0_89Q/viewform?usp=pp_url">Add a product</a>
+    </div>
   </header>
 
   <section class="container">
+
+    <!-- Tech -->    
+
+    <h2>Tech</h2>
+
+    <!-- Phone cases --> 
+    
+    <article class="product">
+      <a href="https://www.hardgraft.com/products/wild-phonecase-classic" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0075/8682/products/WildiPhone2018-classic-07_1024x1024.jpg?v=1538991112);"></div>
+        <div class="product--meta">
+          <span class="product--category">Phone cases</span>
+          <h3 class="product--name">Hardgraft - Wild case</h3>
+          <p class="product--price">£86</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.shopmoment.com/shop/battery-photo-case/battery-case-iphone-x" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://s3.amazonaws.com/files.shopmoment.com/general/_600x450_crop_center-center_82_line/feature-V2-B-07-d.jpg?mtime=20171116171946);"></div>
+        <div class="product--meta">
+          <span class="product--category">Phone cases</span>
+          <h3 class="product--name">Moment battery camera case</h3>
+          <p class="product--price">$90</p>        
+        </div>
+      </a>
+    </article>     
+    
+    <article class="product">
+      <a href="https://www.carlfriedrik.com/products/iphone-11-leather-case?variant=31079847428198" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://friedrikdev.imgix.net/s/files/1/0373/9909/products/leather-iphone-11-case-cognac-brown-2.jpg?v=1573059326&usm=7&usmrad=1.5&auto=format&fm=pjpg&q=52&flip=1&h=1400&w=1400&);"></div>
+        <div class="product--meta">
+          <span class="product--category">Phone cases</span>
+          <h3 class="product--name">Carl Freidrik slim leather case</h3>
+          <p class="product--price">£55</p>        
+        </div>
+      </a>
+    </article> 
+
+    <!-- Charging -->    
+
+    <article class="product">
+      <a href="https://www.punkt.ch/en/products/es01-extension-socket/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.punkt.ch/repoimg/catalogo/ES01/StillLife/x2168-banner_full_crop-demo.jpg.pagespeed.ic.SWHoOl9UYo.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Charging</span>
+          <h3 class="product--name">Punkt Extension Socket</h3>
+          <p class="product--price">£99.95</p>        
+        </div>
+      </a>
+    </article>       
+    
+    <article class="product">
+      <a href="https://www.wearenolii.com/products/set" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.wearenolii.com/imager/images/set/110/set-4_2f32dd1f69408fa5f86b04b47721d875.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Power banks</span>
+          <h3 class="product--name">nolii Portable Multi-Device Power Bank</h3>
+          <p class="product--price">£99.95</p>        
+        </div>
+      </a>
+    </article>  
+
+    <!-- Wireless charger -->
+
+    <article class="product">
+      <a href="https://www.gonimble.com/collections/wireless-charging/products/wireless-pad" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2544/1940/products/3qtr_Single-Dark-Gry_Sand-Background_2448px_180x.jpg?v=1569130606);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wireless chargers</span>
+          <h3 class="product--name">Nimble Wireless Pad</h3>
+          <p class="product--price">$49.95</p>        
+        </div>
+      </a>
+    </article>
+
+    <!-- Apple gadgets -->
+
+    <article class="product">
+      <a href="https://www.elevationlab.com/products/draft-table-for-ipad-pro" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0131/4552/products/DTwithkit_838f8357-0c22-43f9-9ff5-8b9f1713da11_1024x1024.jpg?v=1566927028);"></div>
+        <div class="product--meta">
+          <span class="product--category">Apple accessories</span>
+          <h3 class="product--name">ElevationLab DraftTable</h3>
+          <p class="product--price">$69.95</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://magabolt.com/collections/essentials/products/magabolt-type-c-hub" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0070/0242/3394/products/HUB_5-1_1800x1800.jpg?v=1565119311);"></div>
+        <div class="product--meta">
+          <span class="product--category">Apple accessories</span>
+          <h3 class="product--name">Magabolt 5-in-1 USB-C Hub</h3>
+          <p class="product--price">$39.90</p>        
+        </div>
+      </a>
+    </article>    
+
     <article class="product">
       <a href="https://www.vinpok.com/products/vinpok-taptek-thinnest-wireless-mac-mechanical-keyboard" class="product--link" target="_blank">
         <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2005/4429/products/vinpok-taptek-thinnest-wireless-mac-mechanical-keyboard-11976900280364_600x600.jpg?v=1574654357);"></div>
@@ -127,7 +277,56 @@
           <p class="product--price">$199</p>
         </div>
       </a>
-    </article>
+    </article>       
+
+  </section>
+
+  <section class="container">
+  
+    <h2>Audio</h2> 
+
+    <!-- Audio -->
+    
+    <article class="product">
+      <a href="https://www.xfyro.com/pages/aria" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2787/0432/products/ARIA-Product-Img_600x.jpg?v=1568115185);"></div>
+        <div class="product--meta">
+          <span class="product--category">Audio</span>
+          <h3 class="product--name">ARIA Waterproof Wireless Earbuds</h3>
+          <p class="product--price">£190</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.mightyaudio.co.uk/products/mighty-vibe" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0095/7140/1825/products/color-zazzy-1b_large.jpg?v=1559477898);"></div>
+        <div class="product--meta">
+          <span class="product--category">Audio</span>
+          <h3 class="product--name">Mighty Vibe Spotify speaker</h3>
+          <p class="product--price">£79.99</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://minirigs.co.uk/speakers/bluetooth-minirig-2" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://minirigs.co.uk/sites/default/files/Black_6.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Audio</span>
+          <h3 class="product--name">Minirig 2</h3>
+          <p class="product--price">£124.94</p>        
+        </div>
+      </a>
+    </article> 
+  
+  </section>  
+
+  <section class="container">
+
+    <!-- Stationery -->
+
+    <h2>Stationery</h2>
 
     <article class="product">
       <a href="https://advencher.co/collections/advencher-gear/products/advencher-log" class="product--link" target="_blank">
@@ -171,18 +370,48 @@
           <p class="product--price">$20</p>        
         </div>
       </a>
-    </article>   
+    </article> 
     
     <article class="product">
-      <a href="https://advencher.co/collections/advencher-gear/products/advencher-cap" class="product--link" target="_blank">
-        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1847/6575/products/camp-hat-1_1024x1024@2x.jpg?v=1534882616);"></div>
+      <a href="https://uk.thejamesbrand.com/products/the-benton" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://tjb.imgix.net/TJB_Benton_Silver_Black_TopDownOnWhite_web.jpg?auto=format&dpr=1&fp-x=0.5&fp-y=0.5&crop=focalpoint&fit=crop&w=1328&h=996);"></div>
         <div class="product--meta">
-          <span class="product--category">Headwear</span>
-          <h3 class="product--name">Wool camp cap</h3>
-          <p class="product--price">$32</p>        
+          <span class="product--category">Stationery</span>
+          <h3 class="product--name">James – The Benton Pen</h3>
+          <p class="product--price">£60</p>        
+        </div>
+      </a>
+    </article>     
+    
+    <article class="product">
+      <a href="https://www.presentandcorrect.com/products/perpetual-wall-calendar?_pos=6&_sid=3b35d98fd&_ss=r" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0952/3604/products/perpcal2_1024x1024.jpg?v=1529253870;"></div>
+        <div class="product--meta">
+          <span class="product--category">Stationery</span>
+          <h3 class="product--name">Present &amp; Correct – Disk Wall Calendar</h3>
+          <p class="product--price">£45</p>        
         </div>
       </a>
     </article>  
+    
+    <article class="product">
+      <a href="https://everyman.co/products/grafton-pen" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1240/4182/products/Grafton_Black_17_1200x.png?v=1571112665"></div>
+        <div class="product--meta">
+          <span class="product--category">Stationery</span>
+          <h3 class="product--name">Everyman – Grafton Pen</h3>
+          <p class="product--price">$35</p>        
+        </div>
+      </a>
+    </article>      
+
+  </section>
+
+  <section class="container">
+
+    <h2>Sleep</h2>
+    
+    <!-- Sleep -->    
     
     <article class="product">
       <a href="hhttps://shop.meetsomnox.com/product/somnox-sleep-robot/" class="product--link" target="_blank">
@@ -226,9 +455,553 @@
           <p class="product--price">314€</p>        
         </div>
       </a>
-    </article>         
+    </article>  
+    
+  </section>
 
+  <section class="container">
+
+    <h2>Bottles</h2>    
+
+    <!-- Bottles -->
+
+    <article class="product">
+      <a href="https://bubibottle.com/shop/bubi-bottle-22-oz-650-ml-hydration-water-bottle/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://i1.wp.com/bubibottle.com/wp-content/uploads/2019/05/bubi-bottle-22-oz-blue.jpg?w=1000&ssl=1);"></div>
+        <div class="product--meta">
+          <span class="product--category">Water bottles</span>
+          <h3 class="product--name">Bübi bottle</h3>
+          <p class="product--price">$24.99</p>        
+        </div>
+      </a>
+    </article>   
+    
+    <article class="product">
+      <a href="https://www.daisypark.co.uk/collections/dopper/products/dopper-original-water-bottle" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0039/2672/products/20170323160700_800x.jpg?v=1563964780);"></div>
+        <div class="product--meta">
+          <span class="product--category">Water bottles</span>
+          <h3 class="product--name">Dopper bottle</h3>
+          <p class="product--price">£13</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.monbento.co.uk/mb-positive-m-denim-bottle.html" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.monbento.co.uk/media/resized/532/532//media/catalog/product/m/o/monbento-bottle-bouteille-bottiglia-bottella-flasche-mb-positive-m-denim.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Water bottles</span>
+          <h3 class="product--name">Monbento bottle</h3>
+          <p class="product--price">£13.50</p>        
+        </div>
+      </a>
+    </article>     
+    
+    <article class="product">
+      <a href="https://www.kleankanteen.com/products/insulated-tkpro-25oz?variant=14597371986031" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0607/0325/products/tkpro_square_pouring_lifestyle_ec5bbe2a-5ebd-4b5b-bbba-846a513c5b3e.jpg?v=1544127751);"></div>
+        <div class="product--meta">
+          <span class="product--category">Water bottles</span>
+          <h3 class="product--name">Klean Kanteen Insulated TKPro</h3>
+          <p class="product--price">$44.95</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.opumo.com/lifestyle/food-drink/stay-sixty-coal-edition-bottle.html" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://images.opumo.com/media/s/t/stay-sixty_coal_edition_bottle1.jpg?profile=Opumo-Production&canvas.width=770&canvas.height=1041&canvas.color=ffffff&scale.width=770&scale.height=1041);"></div>
+        <div class="product--meta">
+          <span class="product--category">Water bottles</span>
+          <h3 class="product--name">Opumo Stay Sixty Coal Edition</h3>
+          <p class="product--price">£30</p>        
+        </div>
+      </a>
+    </article>   
+    
+  </section>
+
+  <section class="container">
+
+    <h2>Lunch boxes</h2>     
+    
+    <!-- Lunch boxes -->
+
+    <article class="product">
+      <a href="https://www.monbento.co.uk/bento-box-monbento-mb-original-navy-made-in-france.html" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.monbento.co.uk/media/resized/532/532//media/catalog/product/m/b/mb-original-bento-box-blue-navy-monbento.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Lunch boxes</span>
+          <h3 class="product--name">Monbento Original</h3>
+          <p class="product--price">£31.50</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.swivlit.com/shop/The-Swivlit-p107773350" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://dqzrr9k4bjpzk.cloudfront.net/images/13973063/1104747651.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Lunch boxes</span>
+          <h3 class="product--name">Swivlit</h3>
+          <p class="product--price">£28</p>        
+        </div>
+      </a>
+    </article> 
+
+</section>
+
+<section class="container">
+
+  <h2>Time</h2> 
+
+    <!-- Clocks -->
+    
+    <article class="product">
+      <a href="https://cloudnola.com/collections/modern-wall-clocks/products/flor-white-wall-clock" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0091/6389/8940/products/Cloudnola_SKU0064_Flor_White-Front_1024x1024@2x.jpg?v=1571454011);"></div>
+        <div class="product--meta">
+          <span class="product--category">Clocks</span>
+          <h3 class="product--name">Cloudnola Flor White Wall Clock</h3>
+          <p class="product--price">$60</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://mudita.com/products/bell/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://mudita.com/static/f32731949b0c8a0270ff8459ff1195a5/24ee7/hero.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Clocks</span>
+          <h3 class="product--name">Mudita Bell regeneration clock</h3>
+          <p class="product--price">Preorder</p>        
+        </div>
+      </a>
+    </article>   
+    
+    <!-- Watches -->
+    
+    <article class="product">
+      <a href="https://voidwatches.com/collections/22mm-milanese-collection/products/v01mkii-go-mg" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2074/3125/products/VOID-Watches-V01MKII-GO-MG-2000x2000-Classic_1600x.png?v=1574678941);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Void V01MKII-GO</h3>
+          <p class="product--price">$295</p>        
+        </div>
+      </a>
+    </article>       
+    
+    <article class="product">
+      <a href="https://www.minuteazimut.com/product-page/lizard-bisham-38mm-magenta" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://static.wixstatic.com/media/ea9b53_47a70eec156d49ed859e21e2ab9964cf~mv2_d_5792_8688_s_4_2.jpg/v1/fill/w_1000,h_1500,al_c,q_85,usm_0.66_1.00_0.01/ea9b53_47a70eec156d49ed859e21e2ab9964cf~mv2_d_5792_8688_s_4_2.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Lizard Bisham</h3>
+          <p class="product--price">£260</p>        
+        </div>
+      </a>
+    </article>           
+
+    <article class="product">
+      <a href="https://uk.slim-made.com/shop/slim-made-one-08/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://uk.slim-made.com/wp-content/uploads/2016/08/01-slim-made-one-08-thin-wrist-watch-in-black-with-black-leather-band-front-600x600.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Slim Made One</h3>
+          <p class="product--price">£130</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.adapticwatches.com/watches/obsidian-1" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://images.squarespace-cdn.com/content/v1/56baa5765559865203393264/1475472243506-DUJZTP6C2FOMDHUH8RJR/ke17ZwdGBToddI8pDm48kGXW3oLfnkdYhW7baefwnasUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcbPWX6LYnqpSLd025FMes3hmjGJaL0LevxakUp4UYmSw42es3c5N10tDvhxVIdfL1/thumb_PA021646_1024.jpg?format=2500w);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Adaptic Obsidian</h3>
+          <p class="product--price">$70</p>        
+        </div>
+      </a>
+    </article>    
+    
+    <article class="product">
+      <a href="https://leffamsterdam.com/product/tube-watch-t40-black-limited-ade-edition/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://leffamsterdam.com/app/uploads/2019/09/LEFF-Amsterdam-Tube-Watch-T40-Black-with-Black-Nato-Limited-ADE-Edition.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Leff Amsterdam Tube Watch T40</h3>
+          <p class="product--price">€199</p>        
+        </div>
+      </a>
+    </article>    
+    
+    <article class="product">
+      <a href="https://pictowatches.com/uk/picto-30-mm-black-polished-rose-gold-3812" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://pictowatches.com/media/catalog/product/cache/28/image/800x1200/040ec09b1e35df139433887a97daa66f/p/i/picto_43311-1112_ring_face_web.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Picto Watches</h3>
+          <p class="product--price">£165</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.contemp.us/product-page/amfiteatro-nego" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://static.wixstatic.com/media/7e26ea_18a566532c9846168983b14ea6d71821~mv2_d_1400_1254_s_2.png/v1/fill/w_1000,h_1000,al_c,usm_0.66_1.00_0.01/7e26ea_18a566532c9846168983b14ea6d71821~mv2_d_1400_1254_s_2.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Contempus Amfiteatro Nego</h3>
+          <p class="product--price">$119</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://shop.undp.org/products/humanium-metal-watch-from-triwa" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1581/5497/products/humanium-triwa-watch-white-bg_1024x1024.jpg?v=1570026363);"></div>
+        <div class="product--meta">
+          <span class="product--category">Watches</span>
+          <h3 class="product--name">Humanium Metal Watch - Recycled Strap</h3>
+          <p class="product--price">$299</p>        
+        </div>
+      </a>
+    </article> 
+
+  </section>
+
+  <section class="container">
+
+    <h2>Wallets</h2>     
+
+    <!-- Wallets -->
+    
+    <article class="product">
+      <a href="https://qrator.com/product/phone-case-pouch-wallet-brown" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://d26gcd16fgpb1d.cloudfront.net/images/moodclips/2019/3/28/156606/54878caf5af5d1667caa03c2eb27a0b6-asb.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Garage Phone Case Pouch Wallet</h3>
+          <p class="product--price">€61.32</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.maniwonders.com/" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.maniwonders.com/wp-content/uploads/menu/Cascade-Wallet-Facebook-Website-Card-2017.png);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Mani Wonders Cascade Wallet</h3>
+          <p class="product--price">$169</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://barebones.cc/collections/wallets/products/elements-slate" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0598/6501/products/1_elements_slate_2048x2048.jpg?v=1510097538);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Bare Bones Elements</h3>
+          <p class="product--price">$64</p>        
+        </div>
+      </a>
+    </article>    
+
+    <article class="product">
+      <a href="https://www.carlfriedrik.com/products/swanfield-leather-card-wallet?variant=6974207066140" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://friedrikdev.imgix.net/s/files/1/0373/9909/products/carl-friedrik-swanfield-leather-wallet-cognac-2.jpg?v=1524021460&usm=7&usmrad=1.5&auto=format&fm=pjpg&q=52&flip=1&h=1400&w=1400&);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Carl Friedrik Swanfield</h3>
+          <p class="product--price">£65</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://www.dangoproducts.com/collections/wallets/products/p01-pioneer-wallet-dango-pen" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1981/3079/products/DSC_0094_fixi_2048x2048.jpg?v=1574713828);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Dango P01 Pioneer wallet &amp; Pen</h3>
+          <p class="product--price">$109.00</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://www.hardgraft.com/products/cashcardcoincombi-classic" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0075/8682/products/cashcoincards-classic_abc200f8-84e5-468f-999d-b4c022d809af.jpg?v=1541093263);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Hardgraft cash card coin wallet</h3>
+          <p class="product--price">€180</p>        
+        </div>
+      </a>
+    </article>    
+
+    <article class="product">
+      <a href="https://www.myroik.com/en/city-blue-navy.html" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.myroik.com/media/catalog/product/cache/3/image/1800x/040ec09b1e35df139433887a97daa66f/_/d/_dq_7144_18_color_profile_copia_ok.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Wallets</span>
+          <h3 class="product--name">Roik City</h3>
+          <p class="product--price">€55</p>        
+        </div>
+      </a>
+    </article>       
+
+  </section>
+
+  <section class="container">
+  
+    <h2>Homeware</h2>     
+
+    <!-- Kitchenware -->
+    
+    <article class="product">
+      <a href="https://loki-products.myshopify.com/collections/frontpage/products/loki-sphere-1-loki-probe" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2547/3368/products/Loki-1-probe-image_1024x1024@2x.jpg?v=1542564314);"></div>
+        <div class="product--meta">
+          <span class="product--category">Kitchenware</span>
+          <h3 class="product--name">Loki Sphere smart thermometer</h3>
+          <p class="product--price">$149.00</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://fellowproducts.com/collections/bestsellers/products/the-pour-over-solo-kit" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0057/6235/1219/products/PourOverKit_HeroImage_70828eb8-b1ca-4a4c-b224-2a764c823d00_900x.jpg?v=1573687490);"></div>
+        <div class="product--meta">
+          <span class="product--category">Kitchenware</span>
+          <h3 class="product--name">Fellow pour over kit</h3>
+          <p class="product--price">$199</p>        
+        </div>
+      </a>
+    </article>    
+    
+    <article class="product">
+      <a href="https://www.opinel.com/en/kitchen/collection-les-forges-1890/trio-box-les-forges-1890" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.opinel.com/sites/default/files/styles/product_large/public/produit/boutique/packshot_trio_forges_1890.jpg?itok=lzVFnf5j);"></div>
+        <div class="product--meta">
+          <span class="product--category">Kitchenware</span>
+          <h3 class="product--name">Opinel Trio Box - Les Forgés 1890</h3>
+          <p class="product--price">€290</p>        
+        </div>
+      </a>
+    </article>  
+
+  </section>
+
+  <section class="container">
+  
+    <h2>Luggage</h2> 
+
+    <!-- Backpacks -->
+    
+    <article class="product">
+      <a href="https://www.peakdesign.com/products/everyday-backpack?variant=29743300771884" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/2986/1172/products/black-edb20.jpg?v=1574662250);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Peak Design Everyday</h3>
+          <p class="product--price">£201</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://blackember.com/collections/the-wprt-roll-top-backpack-collection/products/the-wprt-modular-pack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0970/4200/products/Waterproof_Roll_Top_Backpack_347c116d-5cfc-4142-bdf0-d3526700f746_1000x.png?v=1575663200);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Black Ember WPRT Modular Pack</h3>
+          <p class="product--price">$255</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.boundarysupply.com/products/errant-pack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0104/4630/7364/products/Errant-325-Tan-900x1200.png?v=1571957489);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Boundary Supply Errant Pack</h3>
+          <p class="product--price">$159.99</p>        
+        </div>
+      </a>
+    </article>    
+    
+    <article class="product">
+      <a href="https://www.chromeindustries.com/product/niko-camera-backpack/BG-236.html?cgid=backpacks&dwvar_BG-236_color=ALLB" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.chromeindustries.com/dw/image/v2/BBCF_PRD/on/demandware.static/-/Sites-chrome_catalog_master/default/dw291a3788/product-images/BG-236/ALLB/4_BG-236-ALLB.jpg?sw=1000&sh=1000&sm=fit);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Niko Camera Backpack</h3>
+          <p class="product--price">£170</p>        
+        </div>
+      </a>
+    </article>
+    
+    <article class="product">
+      <a href="https://eu.wandrd.com/collections/bags/products/prvke?variant=16220601253922" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0051/0368/1570/products/web_prvke_blue_2000x_e9a3b0dc-f040-47e9-8896-232dd98a50de_2000x.jpg?v=1552407551);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">WANDRD The PRVKE Series</h3>
+          <p class="product--price">$199.14</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://douchebags.com/the-backpack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://douchebags.centracdn.net/client/dynamic/images/159_c7dbea8da4-the-backpack-black-full.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">douchebags The Backpack</h3>
+          <p class="product--price">£159</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.hardgraft.com/products/wellrounded-wool" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0075/8682/products/woolbackpack.jpg?v=1541007582);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Hardgraft Well-Rounded Wool Backpack</h3>
+          <p class="product--price">€810</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://joshuvela.com/collections/bags/products/stone-backpack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0198/1552/products/joshu-vela-bombay-backpack-canvas-flap-minimal-made-in-usa-san-francisco-01.jpg?v=1531271416);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Joshuvela Backpack</h3>
+          <p class="product--price">$168</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://stuartandlau.com/collections/the-capstone-backpack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0541/2609/products/Stuart_Lau___Capstone_Backpack___Men_s_Olive_Backpack___Waterproof_DuraLite_Nylon_Fabric___Primary_View_2000x.jpg?v=1557497759);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Stuart and Lau The Capstone Backpack</h3>
+          <p class="product--price">$295</p>        
+        </div>
+      </a>
+    </article>   
+    
+    <article class="product">
+      <a href="https://www.incase.com/products/bags/backpacks/city-dot-backpack" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.incase.com/media/images/PDP/Dot-Compass.jpg);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">incase City Dot Backpack</h3>
+          <p class="product--price">$79.95</p>        
+        </div>
+      </a>
+    </article>      
+    
+    <article class="product">
+      <a href="https://topodesigns.com/collections/bags/products/rover-pack?variant=31450517667893" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0277/0693/products/bags-rover-pack-navy-red_1728x.jpg?v=1576001749);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Topo Designs Rover Pack</h3>
+          <p class="product--price">$139</p>        
+        </div>
+      </a>
+    </article>  
+    
+    <article class="product">
+      <a href="https://www.nomatic.com/products/nomatic-30l-travel-bag" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0745/1299/products/20190702_Nomatic_S_30L_AngleBack_1024x1024.jpg?v=1566322501);"></div>
+        <div class="product--meta">
+          <span class="product--category">Backpacks</span>
+          <h3 class="product--name">Nomatic 30l Travel Bag</h3>
+          <p class="product--price">£209</p>        
+        </div>
+      </a>
+    </article> 
+    
+  </section>
+
+  <section class="container">
+
+    <h2>Headwear</h2>
+    
+    <!-- Headwear -->
+    
+    <article class="product">
+      <a href="https://advencher.co/collections/advencher-gear/products/advencher-cap" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/1847/6575/products/camp-hat-1_1024x1024@2x.jpg?v=1534882616);"></div>
+        <div class="product--meta">
+          <span class="product--category">Headwear</span>
+          <h3 class="product--name">Wool camp cap</h3>
+          <p class="product--price">$32</p>        
+        </div>
+      </a>
+    </article>  
+
+  </section>
+    
+
+  <section class="container">
+  
+    <h2>Footwear</h2>     
+
+    <!-- Footwear -->
+    
+    <article class="product">
+      <a href="https://mahabis.com/products/classic-slippers/?upper=on&colour=ho" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://cdn.shopify.com/s/files/1/0238/5795/files/MC-F-ON-HO-A2-1.jpg?21"></div>
+        <div class="product--meta">
+          <span class="product--category">Footwear</span>
+          <h3 class="product--name">Mahabis Classic Slipper</h3>
+          <p class="product--price">£89</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.plae.co/collections/adult/products/sun-hematite" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://m.plae.co/s/files/1/0044/1384/9718/products/sun_hematite_lifestyle_1200x720_crop_bottom.jpg?v=1568171933"></div>
+        <div class="product--meta">
+          <span class="product--category">Footwear</span>
+          <h3 class="product--name">Plae Sun Hematite shoe</h3>
+          <p class="product--price">$99</p>        
+        </div>
+      </a>
+    </article> 
+    
+    <article class="product">
+      <a href="https://www.stepneyworkersclub.com/swc/dellow-m-pony-khaki-marble.html" class="product--link" target="_blank">
+        <div class="product--image" style="background-image: url(https://www.stepneyworkersclub.com/media/catalog/product/cache/30/image/870x532/17f82f742ffe127f42dca9de82fb58b1/d/e/dellow_m_pony_print_khkmarb_copy_1.jpg"></div>
+        <div class="product--meta">
+          <span class="product--category">Footwear</span>
+          <h3 class="product--name">Stepney Worker's Club – Sneaker</h3>
+          <p class="product--price">£95</p>        
+        </div>
+      </a>
+    </article>    
+        
   </section>  
+
+  <footer class="footer">
+    A <a href="https://www,twitter.com/disco_lu">@disco_lu</a> production.
+  </footer>
  
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
