@@ -41,12 +41,12 @@
       border-bottom: 1px solid #7f004a;
       color: #7f004a;
       display: flex;
+      line-height: 1;
       justify-content: space-between;
       padding: 2rem;
     }
     .header h1 {
       font-size: 1.5rem;
-      line-height: 1;
     }
     .header a, .footer a {
       border-bottom: 2px solid #7f004a;
@@ -59,9 +59,17 @@
     }
     .header a {
       position: fixed;
-      right: 3rem;
-      top: 3rem;
+      right: 2rem;
+      top: 10rem;
     }
+    @media all and (min-width: 480px) {
+      .header a {
+        position: fixed;
+        right: 3rem;
+        top: 3rem;
+      }
+    }
+
     .footer {
       padding: 4rem;
       text-align: center;
@@ -70,9 +78,13 @@
       color: #7f004a;
       font-size: 2rem;
       letter-spacing: 8px;
-      margin: 4rem 1rem 0 4rem;
       text-transform: uppercase;
       transform: rotate(90deg);
+    }
+    @media all and (min-width: 1024px) {
+      h2 {
+        margin: 4rem 1rem 0 4rem;
+      }
     }
     .container {
       /* display: grid;
@@ -102,10 +114,22 @@
       border: 1px solid #7f004a;
       border-radius: 4px;
       margin: 2rem .5rem;
-      min-width: 320px;
-      max-width: 400px;
+      max-width: 300px;
       padding: 1rem;
       width: 100%;
+    }
+
+    @media all and (min-width: 480px) {
+      .product {
+        margin: 2rem .5rem;
+        min-width: 320px;
+      }      
+    }
+
+    @media all and (min-width: 1024px) {
+      .product {
+        max-width: 400px;
+      }       
     }
 
     .product:hover {
