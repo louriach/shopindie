@@ -11,14 +11,14 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
   <meta name="theme-color" content="#000">
+
+  <link href="https://fonts.googleapis.com/css?family=Rozha+One|Work+Sans&display=swap" rel="stylesheet">
 
   <style>
     * {
       box-sizing: border-box;
+      font-family: 'Rozha One', serif;
       margin: 0;
       padding: 0;
     }
@@ -57,16 +57,22 @@
     .header a:hover, .footer a:hover {
       border-color: transparent;
     }
+    .header a {
+      position: fixed;
+      right: 3rem;
+      top: 3rem;
+    }
     .footer {
       padding: 4rem;
       text-align: center;
     }
     h2 {
       color: #7f004a;
-      font-size: 1rem;
+      font-size: 2rem;
       letter-spacing: 8px;
       margin: 4rem 1rem 0 4rem;
       text-transform: uppercase;
+      transform: rotate(90deg);
     }
     .container {
       /* display: grid;
@@ -123,12 +129,16 @@
       opacity: .5
     }
     .product--category {
-      background-color: #eceeef;
+      background-color: #7f004a;
       border-radius: .5rem;
+      color: #fff;
       display: inline-block;
+      font-family: 'Work Sans', sans-serif;
       font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: 2px;
       margin: .5rem 0;
-      padding: .25rem;
+      padding: .25rem .5rem;
       text-transform: uppercase;
     }
     .product--image {
@@ -163,7 +173,7 @@
   <header class="header">
     <div>
       <h1>Shop Indie</h1>
-      <p>A place to support smaller brands.</p>
+      <p>A directory of products from smaller companies.</p>
     </div>
     <div>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR3P4mzMXHdiaKy3ZL3A-Ouo3ej8MST_A23UcOzNqYx0_89Q/viewform?usp=pp_url">Add a product</a>
